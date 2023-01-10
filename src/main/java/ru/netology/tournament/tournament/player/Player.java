@@ -2,15 +2,13 @@ package ru.netology.tournament.tournament.player;
 
 public class Player {
     int id;
-    String name;
     int strength;
 
     public Player() {
     }
 
-    public Player(int id, String name, int strength) {
+    public Player(int id, int strength) {
         this.id = id;
-        this.name = name;
         this.strength = strength;
     }
 
@@ -20,14 +18,6 @@ public class Player {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public int getStrength() {
