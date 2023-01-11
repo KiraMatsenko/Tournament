@@ -1,8 +1,8 @@
 package ru.netology.tournament.tournament.player;
 
 public class Player {
-    int id;
-    int strength;
+    private int id;
+    private int strength;
 
     public Player() {
     }

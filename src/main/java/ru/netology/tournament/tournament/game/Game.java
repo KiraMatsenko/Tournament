@@ -8,7 +8,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 
 public class Game implements Comparator<Player> {
-    HashMap<String, Player> playersList = new HashMap<>();
+    private HashMap<String, Player> playersList = new HashMap<>();
 
     public HashMap<String, Player> getPlayersList() {
         return playersList;
