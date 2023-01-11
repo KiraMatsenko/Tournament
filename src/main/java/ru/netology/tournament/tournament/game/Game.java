@@ -8,20 +8,20 @@ import java.util.Comparator;
 import java.util.HashMap;
 
 public class Game implements Comparator<Player> {
-    private HashMap<String, Player> playersList = new HashMap<>();
+    private HashMap<String, Player> players = new HashMap<>();
 
     public HashMap<String, Player> getPlayersList() {
-        return playersList;
+        return players;
     }
 
     public void register(String playerName, Player player) {
-        playersList.put(playerName, player);
+        players.put(playerName, player);
     }
 
     public Player findByName(String name) {
         Player found = new Player();
-        for (String key : playersList.keySet()) {
-            Player result = playersList.get(name);
+        for (String key : players.keySet()) {
+            Player result = players.get(name);
             found = result;
         }
         return found;
@@ -35,13 +35,13 @@ public class Game implements Comparator<Player> {
         } else if (findByName(playerName2) == null) {
             throw new NotRegisteredException("Игрок " + playerName2 + " не зарегистрирован");
         } else {
-            for (String key : playersList.keySet()) {
-                Player p1 = playersList.get(playerName1);
+            for (String key : players.keySet()) {
+                Player p1 = players.get(playerName1);
                 player1 = p1;
             }
         }
-        for (String key : playersList.keySet()) {
-            Player p2 = playersList.get(playerName2);
+        for (String key : players.keySet()) {
+            Player p2 = players.get(playerName2);
             player2 = p2;
         }
         return (compare(player1, player2));
